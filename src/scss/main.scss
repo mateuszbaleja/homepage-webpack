@@ -1,13 +1,154 @@
-@import "~normalize.css";
+@import "modules/head.scss";
 
-@import "_variables";
-@import "modules/hello.scss";
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.body {
+  background-image: url(https://image.freepik.com/darmowe-wektory/pusty-pokoj-z-bialymi-sciana-z-cegiel-w-studiu_107791-1349.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 800px;
+  margin: 0px;
+}
+
+.article {
+  &__paragraph--specjal {
+    display: flex;
+    align-items: center;
+  }
+  &__picture {
+    border-radius: 50%;
+    width: 50px;
+  }
+}
+
+.main {
+  margin: 70px auto 0px;
+  display: grid;
+  grid-template-areas: "head head" "section ." "notate notate" "inform inform";
+  grid-template-rows: repeat(4 1fr);
+}
+
+
+
+.header {
+  background: rgb(255, 255, 255);
+  position: fixed;
+  min-height: 60px;
+  width: 100%;
+  top: 0px;
+  margin: 0px;
+}
+
+.inform {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  width: 500px;
+  border: 1px solid;
+  padding: 10px;
+  margin: auto auto 16px auto;
+  border-radius: 20px;
+  background-color: rgb(115, 75, 94);
+}
+
+.head {
+  grid-area: head;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  &__photo {
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: auto auto 10px auto;
+  }
+}
+
+.navigation {
+  display: inline;
+  &__link {
+    display: inline;
+  }
+}
+
+.notate {
+  grid-area: notate;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  width: 500px;
+  border: 1px solid;
+  padding: 10px;
+  margin: auto auto 16px auto;
+  border-radius: 20px;
+  background-color: rgb(115, 75, 94);
+}
+
+.menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.section {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  width: 500px;
+  border: 1px solid;
+  padding: 10px;
+  margin: auto auto 16px auto;
+  border-radius: 20px;
+  background-color: rgb(115, 75, 94);
+  display: grid;
+  grid-area: section;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-template-columns: 1fr 1fr;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.transfer {
+  padding: 16px;
+  display: none;
+  &__link {
+    color: rgb(7, 7, 7);
+    display: block;
+    margin: 0px 0px 16px 0px;
+  }
+}
+
+.transfer--open {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .transfer {
+    background: rgb(212, 212, 212);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+  }
+  .menu {
+    display: none;
+  }
 }
