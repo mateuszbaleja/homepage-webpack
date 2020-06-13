@@ -1,4 +1,5 @@
 
+import '../scss/main.scss';
 
 const firstName = 'Mateusz';
 const age = 29;
