@@ -1,6 +1,10 @@
 
 import '../scss/main.scss';
 
+import moment from 'moment';
+
+console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+
 const firstName = 'Mateusz';
 const age = 29;
 
